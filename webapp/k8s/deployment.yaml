@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-webapp
+spec:
+  selector:
+    matchLabels:
+      app: simple-webapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: simple-webapp
+    spec:
+      containers:
+        - name: fast-api
+          image: varunmallya/learn-locust-web-app:latest
+          ports:
+            - containerPort: 8000
+              name: web-app-port
+              protocol: TCP
+
+          imagePullPolicy: Always

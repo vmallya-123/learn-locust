@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: simple-webapp
+  labels:
+    app: simple-webapp
+spec:
+  ports:
+    - port: 8000
+      targetPort: web-app-port
+      protocol: TCP
+      name: web-app-port
+  selector:
+    app: simple-webapp
+  type: LoadBalancer

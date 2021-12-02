@@ -1,0 +1,9 @@
+resources:
+  - master-controller.yaml
+  - master-service.yaml
+  - worker-controller.yaml
+#MODIFY IMAGE NAME IF YOU HAVE BUILT YOUR OWN IMAGE
+# images:
+#   - name: varunmallya/learn-locust:latest
+#     newName: my.docker.registry.com/my-project/my-app
+#     newTag: test
